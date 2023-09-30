@@ -218,6 +218,14 @@ function roundToPowerOfTen(num, pow) {
 //     return n % 2 === 0 ? 'false' : 'true';                   ???????
 //   }
 // }
+function isPrime(n) {
+  for (let i = 2; n > i; i += 1) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return n > 1;
+}
 
 /**
  * Tries to convert value to number and returns it if conversion was successful;
@@ -252,6 +260,6 @@ module.exports = {
   parseNumberFromString,
   getParallelepipedDiagonal,
   roundToPowerOfTen,
-  // isPrime,
+  isPrime,
   toNumber,
 };
